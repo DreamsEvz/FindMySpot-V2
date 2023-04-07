@@ -4,8 +4,8 @@ import './style.css';
 import mapboxgl from 'mapbox-gl';
 import { useEffect } from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import ExpendableMenu from '../../molecules/ExpendableMenu/ExpendableMenu';
-import PuceList from '../../molecules/PuceList/PuceList';
+import ExpendableMenu from '../molecules/ExpendableMenu/ExpendableMenu';
+import PuceList from '../molecules/PuceList/PuceList';
 
 const Mapbox = () => {
 
@@ -104,7 +104,7 @@ const Mapbox = () => {
                     latitude: 47.443889104089564,
                     zoom: 10
                 }}
-                style={{ width: 99 + 'vw', height: 100 + 'vh', margin: "auto" }}
+                style={{ width: 100 + '%', height: 100 + 'vh' }}
                 mapStyle="mapbox://styles/mapbox/streets-v9"
                 mapboxAccessToken={"pk.eyJ1IjoibmlnaHRtYXJlZXYiLCJhIjoiY2t6bXMzZHh3MDFjbzJvcXU4Z2p0a242OCJ9.iIOQHEgW0oCIwNEEHaYKug"}
                 onClick={(e) => { addMarker(e) }}
@@ -113,8 +113,6 @@ const Mapbox = () => {
                 attributionControl={true}
 
             >
-                <NavigationControl />
-
                 <div style={{ position: 'absolute', padding: '10px', gap: 5 + 'px', display: 'flex', justifyContent: 'center', alignItems: 'center  ' }}>
                     <button className='bg-white hover:bg-blue-900 hover:text-white bg-blue-800 text-blue-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow' onClick={() => {
                         markers.map((marker) => {
@@ -145,10 +143,10 @@ const Mapbox = () => {
 
 
             </Map>
-            <div className='w-full absolute bottom-0 grid grid-cols-1 md:grid-cols-2 bg-white'>
+            {/* <div className='w-full absolute bottom-0 grid grid-cols-1 md:grid-cols-2 bg-white'>
                 <ExpendableMenu changeAddPointState={setAddPoint} changeDescriptionPoint={setDescriptionPoint} changeNamePoint={setNamePoint} />
                 <PuceList items={markersInfo} />
-            </div>
+            </div> */}
 
 
         </>

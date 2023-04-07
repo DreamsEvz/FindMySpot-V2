@@ -17,3 +17,5 @@ use Inertia\Inertia;
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/demo', [App\Http\Controllers\HomeController::class, 'demo']);
+
+Route::get('/markers', [App\Http\Controllers\MarkersController::class, 'index']);

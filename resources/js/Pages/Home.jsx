@@ -1,4 +1,5 @@
-import Mapbox from "../Components/atoms/Map/Map";
+import Mapbox from "../Components/organisms/Map";
+import { Layout } from "../layout/Layout";
 
 const Home = () => {
     return (
@@ -7,5 +8,7 @@ const Home = () => {
         </>
     );
 }
+
+Home.layout = page => <Layout children={page} title="Home" />
 
 export default Home;
