@@ -4,8 +4,10 @@ import './style.css';
 import mapboxgl from 'mapbox-gl';
 import { useEffect } from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import ExpendableMenu from '../molecules/ExpendableMenu/ExpendableMenu';
+import ExpendableMenu from '../molecules/ExpendableMenu';
 import PuceList from '../molecules/PuceList/PuceList';
+import Button from '../atoms/CircularButton';
+import CircularButton from '../atoms/CircularButton';
 
 const Mapbox = () => {
 
@@ -104,7 +106,7 @@ const Mapbox = () => {
                     latitude: 47.443889104089564,
                     zoom: 10
                 }}
-                style={{ width: 100 + '%', height: 100 + 'vh' }}
+                style={{ width: 100 + '%', height: 100 + 'vh', position: 'relative' }}
                 mapStyle="mapbox://styles/mapbox/streets-v9"
                 mapboxAccessToken={"pk.eyJ1IjoibmlnaHRtYXJlZXYiLCJhIjoiY2t6bXMzZHh3MDFjbzJvcXU4Z2p0a242OCJ9.iIOQHEgW0oCIwNEEHaYKug"}
                 onClick={(e) => { addMarker(e) }}
@@ -144,9 +146,12 @@ const Mapbox = () => {
 
             </Map>
             {/* <div className='w-full absolute bottom-0 grid grid-cols-1 md:grid-cols-2 bg-white'>
-                <ExpendableMenu changeAddPointState={setAddPoint} changeDescriptionPoint={setDescriptionPoint} changeNamePoint={setNamePoint} />
+                
                 <PuceList items={markersInfo} />
             </div> */}
+
+            <ExpendableMenu changeAddPointState={setAddPoint} changeDescriptionPoint={setDescriptionPoint} changeNamePoint={setNamePoint} />
+
 
 
         </>

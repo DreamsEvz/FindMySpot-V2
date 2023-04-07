@@ -15,7 +15,10 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
-Route::get('/demo', [App\Http\Controllers\HomeController::class, 'demo']);
-
 Route::get('/markers', [App\Http\Controllers\MarkersController::class, 'index']);
+
+Route::get('/map', [App\Http\Controllers\MapController::class, 'index']);
+
+Route::get('/friends', [App\Http\Controllers\FriendsController::class, 'index']);
+
+Route::get('/profil', [App\Http\Controllers\ProfilController::class, 'index']);
