@@ -1,6 +1,6 @@
 import CircularButton from "../Components/atoms/CircularButton";
 import Mapbox from "../Components/organisms/Mapbox";
-import { Layout } from "../layout/Layout";
+import { Layout } from "../Layout/Layout";
 
 const Map = () => {
     return (

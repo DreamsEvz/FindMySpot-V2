@@ -1,8 +1,8 @@
-import {Layout} from "../layout/Layout";
+import {Layout} from "../Layout/Layout";
 
 const Markers = () => {
     return (
-        <div className="bg-red-500">
+        <div className="bg-red-500 h-screen">
             <h1>Markers</h1>
         </div>
     );
