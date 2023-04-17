@@ -8,12 +8,8 @@ use Inertia\Inertia;
 class HomeController extends Controller
 {
     public function index () {
-        return Inertia::render('Home', [
+        return view('Home', [
             'name' => 'John Doe'
         ]);
-    }
-
-    public function demo () {
-        return Inertia::render('Demo');
     }
 }

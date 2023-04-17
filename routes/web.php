@@ -15,9 +15,7 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/' , function () {
-    return view('Home');
-});
+Route::get('/' , [App\Http\Controllers\HomeController::class, 'index']);
 
 Route::get('/markers', [App\Http\Controllers\MarkersController::class, 'index']);
 
