@@ -17,6 +17,8 @@ use Inertia\Inertia;
 
 Route::get('/' , [App\Http\Controllers\HomeController::class, 'index']);
 
+Route::get('/login', [App\Http\Controllers\AuthController::class, 'login']);
+
 Route::get('/markers', [App\Http\Controllers\MarkersController::class, 'index']);
 
 Route::get('/map', [App\Http\Controllers\MapController::class, 'index']);
