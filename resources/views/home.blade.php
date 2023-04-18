@@ -29,8 +29,8 @@
         <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-8">
-      <a href="localhost:8000/login" class="text-sm font-semibold leading-6 text-blue-600">Se connecter</a>
-        <a href="localhost:8000/login" class="text-sm font-semibold leading-6 text-gray-900">S'inscrire </a>
+      <a href="/login" class="text-sm font-semibold leading-6 text-blue-600">Se connecter</a>
+        <a href="/login" class="text-sm font-semibold leading-6 text-gray-900">S'inscrire </a>
       </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->

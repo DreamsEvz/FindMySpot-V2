@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Inertia\Inertia;
@@ -37,8 +36,15 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
-        if(Auth::attempt($data)) {
-            return redirect()->route('map')->with('success', 'You are logged in');
-        }
+        $user =  User::create([
+            'name' => 'samuel',
+            'email' => $data['email'],
+            'password' => Hash::make($data['password'])
+        ]);
+
+        $user->save();
+
+        return to_route('map');
+        
     }
 }
