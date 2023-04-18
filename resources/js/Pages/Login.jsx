@@ -48,7 +48,7 @@ export default function Login() {
             <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Connectez vous à votre compte</h2>
             <p className="mt-2 text-center text-sm text-gray-600">
               Ou{' '}
-              <a href="127.0.0.1/register" className="font-medium text-indigo-600 hover:text-indigo-500">
+              <a href="/register" className="font-medium text-indigo-600 hover:text-indigo-500">
                 inscrivez-vous
               </a>
             </p>
@@ -59,7 +59,7 @@ export default function Login() {
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                    Email address
+                    Email
                   </label>
                   <div className="mt-2">
                     <input
@@ -77,7 +77,7 @@ export default function Login() {
   
                 <div>
                   <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                    Password
+                    Mot de passe
                   </label>
                   <div className="mt-2">
                     <input
@@ -102,13 +102,13 @@ export default function Login() {
                       className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                     />
                     <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                      Remember me
+                      Se souvenir de moi
                     </label>
                   </div>
   
                   <div className="text-sm">
                     <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                      Forgot your password?
+                      Mot de passe oublié ?
                     </a>
                   </div>
                 </div>
@@ -118,12 +118,12 @@ export default function Login() {
                     type="submit"
                     className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
-                    Sign in
+                    Se connecter
                   </button>
                 </div>
               </form>
   
-              <div className="mt-6">
+              {/* <div className="mt-6">
                 <div className="relative">
                   <div className="absolute inset-0 flex items-center">
                     <div className="w-full border-t border-gray-300" />
@@ -178,7 +178,7 @@ export default function Login() {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

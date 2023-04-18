@@ -9,8 +9,12 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
-    public function index () {
+    public function indexLogin () {
         return Inertia::render('Login');
+    }
+
+    public function indexRegister() {
+        return Inertia::render('Register');
     }
 
     public function register() {
@@ -44,7 +48,6 @@ class AuthController extends Controller
 
         $user->save();
 
-        return to_route('map');
-        
+        return redirect()->route('map');
     }
 }
