@@ -16,7 +16,7 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/' , [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 
 
@@ -31,8 +31,20 @@ Route::group([
     Route::delete('/logout', 'logout');
 });
 
-Route::get('/markers', [App\Http\Controllers\MarkersController::class, 'index'])->name('markers')->middleware('auth');
-Route::get('/map', [App\Http\Controllers\MapController::class, 'index'])->name('map')->middleware('auth');
-Route::get('/friends', [App\Http\Controllers\FriendsController::class, 'index'])->middleware('auth');
-Route::get('/profil', [App\Http\Controllers\ProfilController::class, 'index'])->middleware('auth');
+
+Route::get('/' , [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group([
+    'middleware' => 'auth',
+], function () {
+    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/markers', [App\Http\Controllers\MarkersController::class, 'index'])->name('markers.index');
+
+    Route::get('/map', [App\Http\Controllers\MapController::class, 'index'])->name('map');
+    Route::post('/map', [App\Http\Controllers\MapController::class, 'create'])->name('map.create'); 
+
+    Route::get('/friends', [App\Http\Controllers\FriendsController::class, 'index']);
+    Route::get('/profil', [App\Http\Controllers\ProfilController::class, 'index']);
+});
+
 
