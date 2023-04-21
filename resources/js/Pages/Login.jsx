@@ -1,6 +1,5 @@
 import { router } from "@inertiajs/react"
-import { useEffect, useState } from "react"
-
+import { useState } from "react"
 
 /*
   This example requires some changes to your config:

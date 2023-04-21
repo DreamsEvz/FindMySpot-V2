@@ -1,23 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
   @viteReactRefresh
   @vite(['resources/css/app.css', 'resources/js/app.jsx'])
 </head>
+<body>
 <div class="bg-white">
   <header class="absolute inset-x-0 top-0 z-50">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">Your Company</span>
-          <svg version="1.1" class="w-auto h-20" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg class="w-auto h-20" version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#0000FF;stroke:#FFFFFF;stroke-width:17;stroke-miterlimit:10;}
+	.st0{fill:#1E40AF;stroke:#FFFFFF;stroke-width:9;stroke-miterlimit:10;}
 	.st1{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:10;stroke-miterlimit:10;}
 	.st2{fill:#FFFFFF;stroke:#0000FF;stroke-width:2;stroke-miterlimit:10;}
-	.st3{fill:#FFFFFF;stroke:#0000FF;stroke-width:5;stroke-miterlimit:10;}
-	.st4{fill:#0000FF;stroke:#0000FF;stroke-width:5;stroke-miterlimit:10;}
-	.st5{fill:#0000FF;stroke:#0000FF;stroke-miterlimit:10;}
-	.st6{fill:#FFFFFF;stroke:#0000FF;stroke-width:3;stroke-miterlimit:10;}
+	.st3{fill:#FFFFFF;stroke:#1E40AF;stroke-width:5;stroke-miterlimit:10;}
+	.st4{fill:#1E40AF;stroke:#1E40AF;stroke-width:5;stroke-miterlimit:10;}
+	.st5{fill:#1E40AF;stroke:#1E40AF;stroke-miterlimit:10;}
+	.st6{fill:#FFFFFF;stroke:#1E40AF;stroke-width:3;stroke-miterlimit:10;}
 </style>
 <polygon class="st0" points="46.1,100.02 96.95,650.15 461.26,734.59 715.01,663.98 1037.25,734.59 1336.5,592.91 1186.21,107.99 
 	906.61,150.94 575.67,70.92 288.27,141.52 42.13,61 "/>
@@ -63,16 +66,15 @@
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Product</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Le produit</a>
 
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Les fonctionnalités</a>
 
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Qui sommes nous ?</a>
 
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-8">
-      <a href="/login" class="text-sm font-semibold leading-6 text-blue-600">Se connecter</a>
+      <a href="/login" class="text-sm font-semibold leading-6 text-blue-800">Se connecter</a>
         <a href="/login" class="text-sm font-semibold leading-6 text-gray-900">S'inscrire </a>
       </div>
     </nav>
@@ -118,25 +120,20 @@
 
   <div class="relative isolate px-6 pt-14 lg:px-8">
     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-      <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#7c96e8] to-[#1E40AF] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
     </div>
     <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-      <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-        <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-          Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
-        </div>
-      </div>
+      
       <div class="text-center">
-        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Data to enrich your online business</h1>
-        <p class="mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
-        <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
-        </div>
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Partagez vos meilleurs spots avec votre entourage</h1>
+        <p class="mt-6 text-lg leading-8 text-gray-600">Envie de garder en mémoire l'emplacement d'un superbe endroit ou vous avez camper ?<br> Envie de partager à vos amis la ou se situe vos restaurants préférés ? </br> Grâce à FindMySpot cela est désormais possible !</p>
+      
       </div>
     </div>
     <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-      <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#7c96e8] to-[#1E40AF] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
     </div>
   </div>
 </div>
+</body>
+</html>

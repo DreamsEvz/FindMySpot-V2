@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Inertia\Inertia;
 use App\Models\User;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class AuthController extends Controller
 {
@@ -17,14 +19,24 @@ class AuthController extends Controller
         return Inertia::render('Register');
     }
 
+    public function logout(Request $request) {
+
+        
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return Auth::logout();
+    }
+
     public function register() {
         $data = request()->validate([
+            'name' => 'required',
             'email' => 'required|email',
             'password' => 'required'
         ]);
 
         $user =  User::create([
-            'name' => 'samuel',
+            'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password'])
         ]);
@@ -40,14 +52,10 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
-        $user =  User::create([
-            'name' => 'samuel',
-            'email' => $data['email'],
-            'password' => Hash::make($data['password'])
-        ]);
 
-        $user->save();
-
-        return redirect()->route('map');
+        if(Auth::attempt($data)) {
+            request()->session()->regenerate();
+            return redirect()->route('map');
+        }
     }
 }
