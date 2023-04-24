@@ -1,6 +1,7 @@
 
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -15,13 +16,35 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/' , [App\Http\Controllers\HomeController::class, 'index']);
 
-Route::get('/login', [App\Http\Controllers\AuthController::class, 'index']);
-Route::get('/markers', [App\Http\Controllers\MarkersController::class, 'index'])->name('markers');
-Route::get('/map', [App\Http\Controllers\MapController::class, 'index'])->name('map');
-Route::get('/friends', [App\Http\Controllers\FriendsController::class, 'index']);
-Route::get('/profil', [App\Http\Controllers\ProfilController::class, 'index']);
 
-Route::post('/login', [App\Http\Controllers\AuthController::class, 'register']);
-Route::post('/login', [App\Http\Controllers\AuthController::class, 'login']);
+
+
+
+Route::group([
+    'controller' => AuthController::class,
+], function () {
+    Route::get('/login', 'indexLogin')->name('login');
+    Route::get('/register' ,'indexRegister');
+    Route::post('/register','register');
+    Route::post('/login', 'login');
+    Route::delete('/logout', 'logout');
+});
+
+
+Route::get('/' , [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group([
+    'middleware' => 'auth',
+], function () {
+    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/markers', [App\Http\Controllers\MarkersController::class, 'index'])->name('markers.index');
+
+    Route::get('/map', [App\Http\Controllers\MapController::class, 'index'])->name('map');
+    Route::post('/map', [App\Http\Controllers\MapController::class, 'create'])->name('map.create'); 
+
+    Route::get('/friends', [App\Http\Controllers\FriendsController::class, 'index']);
+    Route::get('/profil', [App\Http\Controllers\ProfilController::class, 'index']);
+});
+
+

@@ -1,9 +1,9 @@
 import React from 'react'
-import { Layout } from '../Layout/Layout'
+import { Layout } from '../layout/Layout'
 
 const Profil = () => {
     return (
-        <div className='h-screen bg-red-700'>
+        <div>
             <h1>Profil</h1>
         </div>
     )
