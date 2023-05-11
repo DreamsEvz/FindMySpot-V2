@@ -34,7 +34,5 @@ class MapController extends Controller
         ]);
 
         $marker->save();
-
-        dd($marker);
     }
 }

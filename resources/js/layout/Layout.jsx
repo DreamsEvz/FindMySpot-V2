@@ -1,6 +1,6 @@
 import { Link } from "@inertiajs/react";
-import { UserCircleIcon as UserCircleOutline, LocationMarkerIcon as LocationMarkerOutline, UserGroupIcon as UserGroupOutline, MapIcon as MapIconOutilne } from '@heroicons/react/outline'
-import { UserCircleIcon as UserCircleSolid, LocationMarkerIcon as LocationMarkerSolid, UserGroupIcon as UserGroupSolid, MapIcon as MapIconSolid } from '@heroicons/react/solid'
+import { UserCircleIcon as UserCircleOutline, LocationMarkerIcon as LocationMarkerOutline, UserGroupIcon as UserGroupOutline} from '@heroicons/react/outline'
+import { UserCircleIcon as UserCircleSolid, LocationMarkerIcon as LocationMarkerSolid, UserGroupIcon as UserGroupSolid } from '@heroicons/react/solid'
 
 
 export function Layout({ children, title }) {
@@ -11,7 +11,7 @@ export function Layout({ children, title }) {
                                 <Link href="/map" className="flex justify-center items-center cursor-pointer">
                                         <span className="hidden lg:block md:block">Carte</span>
                                         {
-                                                title == "map" ? <MapIconSolid className="text-blue-800 h-6 sm:ml-2 lg:ml-2"></MapIconSolid> : <MapIconOutilne className="text-blue-800 h-6 sm:ml-2 lg:ml-2"></MapIconOutilne>
+                                                title == "map" ? <img src="images/logo_sans_banner.svg" className="text-blue-500 w-20 h-auto sm:ml-2 lg:ml-2"/> : <img src="images/logo_sans_banner_outline.svg" className="w-20 h-auto sm:ml-2 lg:ml-2"/>
                                         }
                                 </Link>
                                 <Link href="/markers" className="flex justify-center items-center cursor-pointer">
