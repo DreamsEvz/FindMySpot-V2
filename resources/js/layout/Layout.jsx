@@ -11,7 +11,7 @@ export function Layout({ children, title }) {
                                 <Link href="/map" className="flex justify-center items-center cursor-pointer">
                                         <span className="hidden lg:block md:block">Carte</span>
                                         {
-                                                title == "map" ? <img src="images/logo_sans_banner.svg" className="text-blue-500 w-20 h-auto sm:ml-2 lg:ml-2"/> : <img src="images/logo_sans_banner_outline.svg" className="w-20 h-auto sm:ml-2 lg:ml-2"/>
+                                                title == "map" ? <img src="images/logo_sans_banner.svg" className="text-blue-500 w-10 h-auto sm:ml-2 lg:ml-2"/> : <img src="images/logo_sans_banner_outline.svg" className="w-10 h-auto sm:ml-2 lg:ml-2"/>
                                         }
                                 </Link>
                                 <Link href="/markers" className="flex justify-center items-center cursor-pointer">

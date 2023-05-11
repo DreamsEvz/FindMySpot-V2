@@ -23,7 +23,6 @@ class MapController extends Controller
             'type' => ''
         ]);
 
-
         $marker = Marker::create([
             'name' => $data['name'],
             'description' => $data['description'],

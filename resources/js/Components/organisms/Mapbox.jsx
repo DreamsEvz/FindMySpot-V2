@@ -5,9 +5,6 @@ import mapboxgl from 'mapbox-gl';
 import { useEffect } from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ExpendableMenu from '../molecules/ExpendableMenu';
-import PuceList from '../molecules/PuceList/PuceList';
-import Button from '../atoms/CircularButton';
-import CircularButton from '../atoms/CircularButton';
 import { router } from '@inertiajs/react';
 
 const Mapbox = () => {

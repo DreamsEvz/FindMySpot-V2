@@ -26,7 +26,7 @@ const ExpendableMenu = ({changeAddPointState, changeDescriptionPoint, changeName
                 <CircularButton></CircularButton>
             </div>
             {
-                isOpen && <div className="lg:absolute lg:w-auto lg:h-full lg:right-0 bg-red-700 lg:flex lg:flex-col lg:p-4 lg:gap-10">
+                isOpen && <div className="lg:absolute lg:w-auto lg:h-full lg:right-0 bg-white lg:flex lg:flex-col lg:p-4 lg:gap-10">
                     <InputWithLabel label='Nom du point' placeholder='Nom du point' onChange={handleChangesName}></InputWithLabel>
                     <InputWithLabel label='Description du point' placeholder='Description du point' onChange={handleChangesDescription}></InputWithLabel>
                     <div className='flex justify-center'>
